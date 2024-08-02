@@ -1,0 +1,112 @@
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ background-color:#240046;
+ height: 100vh;
+ width:100%;
+}
+.innerDiv{
+display:flex;
+align-items: center;
+justify-content: center;
+    height: 5rem;
+    width:25rem;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 10px;
+     background:hsla(300, 76%, 21%, 15%);
+    backdrop-filter: blur(40px); 
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    background-color: hsla(0, 0%, 50%,12%);
+    backdrop-filter: blur(15px);
+
+    padding:2rem;
+    position: relative;
+    z-index: 1000;
+    /* border:2px solid whitesmoke; */
+
+}
+.innerDiv::after{
+    content:'';
+  height:5rem;
+    width:20rem;
+    /* background:hsla(212, 100%, 63%, 25%); */
+    position:absolute;
+    filter: blur(50px);
+    background: linear-gradient(red,rgb(19, 137, 235),rgb(234, 7, 7),red);
+   
+    border-radius:50%;
+    top:2rem;
+    right:-2rem;
+    z-index: -1;
+    
+}
+.innerDiv::before{
+    content:'';
+  height:5rem;
+    width:22rem;
+    filter: blur(50px);
+    background:hsla(335, 91%, 53%, 25%);
+    background: linear-gradient(rgb(27, 20, 219),rgb(19, 137, 235),rgb(14, 118, 215));
+   
+    position:absolute;
+    border:none;
+    border-radius:5px;
+    bottom:2rem;
+    left:-3rem;
+    z-index: -4;
+}
+
+
+.hour, .min, .sec{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+   
+color:white;
+    margin:2rem;
+    margin-bottom:0%;
+
+}
+
+span{
+ font-size:4rem;
+ color:whitesmoke;  
+ margin:1rem;
+    font-weight:bold;
+    position: relative;
+}
+span::after{
+    content: '';
+    font-size: 1rem;
+    font-weight: normal;
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+}
+#hours::after{
+    content: 'Hour';
+
+}
+#min::after{
+    content: 'Minutes';
+    
+}
+#sec::after{
+    content: 'Secs';
+}
+.small{
+    
+}
+.innerMost{
+
+}
